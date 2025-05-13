@@ -51,7 +51,7 @@ function AuthScreen() {
     <div className="auth-container">
       <h2>{isRegistering ? 'Sign Up' : 'Sign In'}</h2>
       {error && <p className="error">{error}</p>}
-
+      <h1>Survey App</h1>
       <input
         type="email"
         placeholder="Email"
@@ -75,8 +75,12 @@ function AuthScreen() {
         </button>
       </p>
 
-      <button onClick={handleGoogle}>Sign in with Google</button>
-      <button onClick={handleGitHub}>Sign in with GitHub</button>
+      <button className="google-btn" onClick={handleGoogle}>
+        Sign in with Google
+      </button>
+      <button className="github-btn" onClick={handleGitHub}>
+        Sign in with GitHub
+      </button>
     </div>
   );
 }

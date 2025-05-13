@@ -308,3 +308,75 @@ form label input[type='radio'] {
 .toggle-label input:checked::before {
   transform: translateX(20px);
 }
+
+/* Sign-In Page Styling */
+
+.auth-container {
+  background: linear-gradient(135deg, #1e1e1e, #232323);
+  border: 1px solid #444;
+  border-left: 5px solid #6a8eff;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #6a8eff, #a78bfa);
+  z-index: -1;
+  filter: blur(18px);
+  opacity: 0.1;
+}
+
+/* Inputs Glow on Focus */
+.auth-container input:focus,
+.auth-container select:focus,
+.auth-container textarea:focus {
+  box-shadow: 0 0 8px rgba(106, 142, 255, 0.7);
+}
+
+/* Neon Hover for Buttons */
+.auth-container button {
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.auth-container button:hover {
+  box-shadow: 0 0 10px rgba(106, 142, 255, 0.5);
+}
+
+/* Google & GitHub buttons distinct */
+button.google-btn {
+  background: linear-gradient(to right, #db4437, #ff6f61);
+  color: white;
+}
+button.google-btn:hover {
+  background: #c1351d;
+  box-shadow: 0 0 10px rgba(255, 107, 89, 0.6);
+}
+
+button.github-btn {
+  background: linear-gradient(to right, #333, #444);
+  color: white;
+}
+button.github-btn:hover {
+  background: #111;
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.2);
+}
+
+/* Entrance Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
